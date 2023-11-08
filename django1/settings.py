@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,6 +88,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgres://djangolacava_user:YWi18SJQksiSNbpV6MZ4xzoOQ0dO0WFY@dpg-cl5r2ed6fh7c73etlr0g-a/djangolacava")
 
 # DATABASES = {
 #     'default': {
